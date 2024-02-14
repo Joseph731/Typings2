@@ -98,7 +98,7 @@ int main() {
 				if (yesSolution) {
 					if (input == "y") {
 						std::cout << "Correct!\n";
-						score += 100;
+						score += 50;
 					}
 					else {
 						std::cout << "Wrong!\nLives Remaining: " << --lives << '\n';
