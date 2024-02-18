@@ -82,11 +82,12 @@ int main() {
 				int randomNum2 { static_cast<int>(rand() % 4 + 1) };
 				bool yesSolution{ randomNum2 > 1 };
 				std::string middleText{};
-				if (yesSolution)
+				if (yesSolution) {
 					middleText = types.at(randomNum).getNoEffect();
+					types.at(randomNum).setNoEffectToEmpty();
+				}
 				else
 					middleText = types.at(randomNum).getRandomNonNoEffectType();
-				types.at(randomNum).setNoEffectToEmpty();
 
 				std::string input{};
 				while (input != "y" && input != "n") {
