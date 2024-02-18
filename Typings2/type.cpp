@@ -6,6 +6,8 @@ Type::Type(std::string name_val, std::vector<std::string> superEffective_val, st
 		for (int j{ 0 }; j < superEffective.size(); j++) {
 			if (fakeSuperEffective.at(i) == superEffective.at(j)) {
 				fakeSuperEffective.erase(fakeSuperEffective.begin() + i);
+				i--; //Prevents skipping over the next index
+				break;
 			}
 		}
 	}
@@ -14,6 +16,8 @@ Type::Type(std::string name_val, std::vector<std::string> superEffective_val, st
 		for (int j{ 0 }; j < notEffective.size(); j++) {
 			if (fakeNotEffective.at(i) == notEffective.at(j)) {
 				fakeNotEffective.erase(fakeNotEffective.begin() + i);
+				i--; //Prevents skipping over the next index
+				break;
 			}
 		}
 	}

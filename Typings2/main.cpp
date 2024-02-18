@@ -21,10 +21,10 @@ int main() {
 	Type flying("Flying", { "Fighting", "Bug", "Grass" }, { "Rock", "Electric", "Steel" });
 	Type normaler("Normal", {}, { "Rock", "Steel" }, "Ghost");
 	Type grass("Grass", { "Ground", "Rock", "Water" }, { "Flying", "Poison", "Bug", "Steel", "Fire", "Grass", "Dragon" });
-	Type bug("Bug", { "Grass", "Psychic", "Dark" }, { "Fighting", "Flying", "Poison", "Ghost", "Steel", "Fire" });
+	Type bug("Bug", { "Grass", "Psychic", "Dark" }, { "Fighting", "Flying", "Poison", "Ghost", "Steel", "Fire", "Fairy"});
 	Type electric("Electric", { "Flying", "Water" }, { "Grass", "Electric", "Dragon" }, "Ground");
 	Type psychic("Psychic", { "Fighting", "Poison" }, { "Steel", "Psychic" }, "Dark");
-	Type fighting("Fighting", { "Normal", "Rock", "Steel", "Ice", "Dark" }, { "Flying", "Poison", "Bug", "Psychic" }, "Ghost");
+	Type fighting("Fighting", { "Normal", "Rock", "Steel", "Ice", "Dark" }, { "Flying", "Poison", "Bug", "Psychic", "Fairy"}, "Ghost");
 	
 	/* initialize random seed: */
 	srand(static_cast<int>(time(NULL)));
