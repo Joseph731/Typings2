@@ -25,6 +25,9 @@ int main() {
 	Type electric("Electric", { "Flying", "Water" }, { "Grass", "Electric", "Dragon" }, "Ground");
 	Type psychic("Psychic", { "Fighting", "Poison" }, { "Steel", "Psychic" }, "Dark");
 	Type fighting("Fighting", { "Normal", "Rock", "Steel", "Ice", "Dark" }, { "Flying", "Poison", "Bug", "Psychic", "Fairy"}, "Ghost");
+	Type poison("Poison", { "Grass" }, { "Rock", "Ground", "Poison", "Ghost" }, "Steel");
+	Type fire("Fire", { "Grass", "Ice", "Bug", "Steel" }, { "Fire", "Dragon", "Water", "Rock" });
+	Type rock("Rock", { "Flying", "Bug", "Fire", "Ice" }, { "Ground", "Steel", "Fighting" });
 	
 	/* initialize random seed: */
 	srand(static_cast<int>(time(NULL)));
@@ -33,7 +36,7 @@ int main() {
 	std::string playAgainInput{};
 	while (playAgainInput != "n" && playAgainInput != "no") {
 
-		std::vector<Type> types{ water, flying, normaler, grass, bug, electric, psychic, fighting };
+		std::vector<Type> types{ water, flying, normaler, grass, bug, electric, psychic, fighting, poison, fire, rock };
 
 		std::cout << "Welcome to Pokemon Type Master!\n\nENTER YOUR DIFFICULTY:\tEasy: 1  Normal: 2  Expert: 3  MASTER: 4\n";
 		Difficulty difficulty{normal};
